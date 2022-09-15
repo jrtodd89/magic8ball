@@ -1,5 +1,6 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
+	display: flex;
 }
 
 .hide {
@@ -11,7 +12,15 @@ body {
 }
 
 input {
-	display: block;
+	/* but why tho? */
+	width: 99%;
+	margin-top: 10px;
+	font-size: 24px;
+	line-height: 24px;
+}
+
+input:focus {
+	border-color: blue;
 }
 
 .outerBall {
@@ -63,26 +72,19 @@ input {
 	padding-bottom: 40px;
 }
 
-input {
-	width: 700px;
-	margin-top: 10px;
-	font-size: 24px;
-	line-height: 24px;
-}
-
-input:focus {
-	border-color: blue;
-}
-
 button {
 	background-color: #fff;
 	border: 2px solid grey;
 	padding: 24px 32px;
 	cursor: pointer;
-	margin: 10px 10px 10px 0;
+	margin: 10px 0 0 0;
 	text-align: center;
 	font-weight: bolder;
 	transition: all 500ms ease;
+}
+
+.clearStorage {
+	float: right;
 }
 
 button:hover {
@@ -90,9 +92,10 @@ button:hover {
 	color: #fff;
 }
 
-.questionContainer {
+.questionContainer, .questionAnswerContainer {
 	font-size: 24px;
 	line-height: 24px;
+	margin-top: 16px;
 }
 
 .question {
