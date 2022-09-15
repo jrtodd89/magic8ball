@@ -34,6 +34,7 @@ function ask() {
 
 
 const input = document.createElement('input');
+input.placeholder = `Please ask a question.`;
 document.body.append(input);
 
 const submit = document.createElement('button');
