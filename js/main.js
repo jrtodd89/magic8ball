@@ -44,15 +44,22 @@ submit.addEventListener('click', function() {
 	ask();
 	const question = document.createElement('p');
 	question.classList.add('question');
-	question.innerHTML = localStorage.getItem('question');
+	if (input.value === '') {
+		answerContainer.innerHTML = `I told you to ask a question.`;
+		question.innerHTML = `&nbsp;`;
+	} else {
+		question.innerHTML = localStorage.getItem('question');
+	}
 	document.querySelector('.questionContainer').append(question);
 	document.querySelector('.innerBall').classList.add('innerBallGrey');
 	input.classList.add('hide');
+	reset.classList.remove('hide');
 });
 
 
 const reset = document.createElement('button');
 reset.innerHTML = `Reset`;
+reset.classList.add('hide');
 document.body.append(reset);
 reset.addEventListener('click', function() {
 	if (document.querySelector('#answers')) {
@@ -68,4 +75,5 @@ reset.addEventListener('click', function() {
 	input.classList.remove('hide');
 	input.value = '';
 	submit.classList.remove('hide');
+	reset.classList.add('hide');
 })
