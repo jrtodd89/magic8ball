@@ -1,5 +1,5 @@
 // Fun facts:
-// Classes are added / removed 18 times, which is nearly 15% of the code by itself
+// Classes are added / removed 18 times, which is over 15% of the code by itself
 
 let questionHistory = [];
 let answerHistory = [];

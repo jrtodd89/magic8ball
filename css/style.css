@@ -1,6 +1,7 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	display: flex;
+	background-color: #336699;
 }
 
 .hide {
@@ -17,6 +18,7 @@ input {
 	margin-top: 10px;
 	font-size: 24px;
 	line-height: 24px;
+	color: #336699;
 }
 
 input:focus {
@@ -74,28 +76,31 @@ input:focus {
 
 button {
 	background-color: #fff;
-	border: 2px solid grey;
+	border: 2px solid #336699;
 	padding: 24px 32px;
 	cursor: pointer;
 	margin: 10px 0 0 0;
 	text-align: center;
 	font-weight: bolder;
 	transition: all 500ms ease;
+	color: #336699;
+}
+
+button:hover {
+	background-color: #336699;
+	border: 2px solid #fff;
+	color: #fff;
 }
 
 .clearStorage {
 	float: right;
 }
 
-button:hover {
-	background-color: grey;
-	color: #fff;
-}
-
 .questionContainer, .questionAnswerContainer {
 	font-size: 24px;
 	line-height: 24px;
 	margin-top: 16px;
+	color: #fff;
 }
 
 .question {
